@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar">
+        <div class="nav_container">
+          <div class="nav_left">
+            <button class="back_btn" onclick="back_button()"></button>
+            <div class="best_img"></div>
+          </div>
+          <div>
+            <button class="menu_btn" onclick="menu_button()"></button>
+          </div>
+        </div>
+      </nav>
+      <div class="main">
+        <div class="reply_info">
+          <div class="user_profile">
+            <img src="assets/person1.svg" style="width: 30px; height: 30px" />
+            <img src="assets/facebook.svg" style="width: 15px; height: 15px" />
+            <h5 class="user_name">Jonathan Lee</h5>
+            <img src="assets/badge.svg" style="width: 15px; height: 15px; fill: white" />
+          </div>
+          <div class="updated_time">
+            <h5 class="time">한시간 전</h5>
+          </div>
+        </div>
+        <div class="reply_container">
+          <div class="reply">
+            저 또한 아이폰 12Pro Max를 사용하면서 영상, 사진 등 전문적인 작업을 제외하곤 모든 것을 해결하고 있는데 요즘 스마트폰은
+            RAW 촬영 또한 지원하는데요. 그래서 이번에 새로 클라우드 서비스를 구매하였는데 월 8,900원....
+          </div>
+          <div class="reply_detail">
+            <div class="reply_reply">
+              <img src="assets/reply.svg" style="margin-right: 5px" />
+              <p>8</p>
+            </div>
+            <div class="reply_status">
+              <div>
+                <img src="assets/thumb-up.svg" style="margin-right: 5px" />
+                <p>12</p>
+              </div>
+              <div>
+                <img src="assets/thumb-down.svg" style="margin-right: 5px" />
+                <p>1</p>
+              </div>
+              <div>
+                <img src="assets/share.svg" style="margin-right: 5px" />
+                <p>5</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="reply_list_container">
+        <div class="reply_list">
+          <div class="reply_info list_info">
+            <div class="user_profile list_profile">
+              <img src="assets/down-right-arrow.svg" />
+              <img src="assets/person1.svg" style="width: 25px; height: 25px" />
+              <img src="assets/facebook.svg" style="width: 15px; height: 15px" />
+              <h5>Jonathan Lee</h5>
+              <img src="assets/badge-black.svg" style="width: 15px; height: 15px" />
+              <p class="date">2021.01.15.04:46</p>
+            </div>
+            <div>
+              <img src="assets/rotated-menu.svg" />
+            </div>
+          </div>
+          <div class="list_reply">
+            저 또한 아이폰 12Pro Max를 사용하면서 영상, 사진 등 전문적인 작업을 제외하곤 모든 것을 해결하고 있는데 요즘 스마트폰은
+            RAW 촬영 또한 지원하기 때문에 원본의 용량이...
+  
+            <a href="#" style="color: gray">댓글 더보기</a>
+            <div class="list_detail">
+              <div class="list_detail left">
+                <button onclick="reply_count()">
+                  <div class="div_reply">
+                    <img src="assets/reply-gray.svg" style="width: 20px; height: 15px" />
+                    <h5 id="reply_count">0</h5>
+                  </div>
+                </button>
+              </div>
+              <div class="list detail right">
+                <button onclick="like_count()">
+                  <div class="div_reply">
+                    <img src="assets/thumb-up-gray.svg" style="width: 20px; height: 15px" />
+                    <h5 id="like_count">0</h5>
+                  </div>
+                </button>
+                <button onclick="dislike_count()">
+                  <div class="div_reply">
+                    <img src="assets/thumb-down-gray.svg" style="width: 20px; height: 15px" />
+                    <h5 id="dislike_count">0</h5>
+                  </div>
+                </button>
+                <button onclick="share_count()">
+                  <div class="div_reply">
+                    <img src="assets/share-gray.svg" style="width: 20px; height: 15px" />
+                    <h5 id="share_count">0</h5>
+                  </div>
+                </button>
+              </div>
+            </div>
+           
+          </div>
+          <hr class="devide_line"></hr>
+        </div>
+        <div class="reply_list">
+          <div class="reply_info list_info">
+            <div class="user_profile list_profile">
+              <img src="assets/down-right-arrow.svg" />
+              <img src="assets/person2.svg" style="width: 25px; height: 25px" />
+              <img src="assets/twitter.svg" style="width: 15px; height: 15px" />
+              <h5>Oh In Young</h5>
+              <img src="assets/badge-black.svg" style="width: 15px; height: 15px" />
+              <p class="date">2021.01.15.04:46</p>
+            </div>
+            <div>
+              <img src="assets/rotated-menu.svg" />
+            </div>
+          </div>
+          <div class="list_reply">
+            저 또한 아이폰 12Pro Max를 사용하면서 영상, 사진 등 전문적인 작업을 제외하곤 모든 것을 해결하고 있는데 요즘 스마트폰은
+            RAW 촬영 또한 지원하기 때문에 원본의 용량이...
+  
+            <a href="#" style="color: gray">댓글 더보기</a>
+            <div id="2" class="list_detail">
+              <div class="list_detail left">
+                <button >
+                  <div class="div_reply">
+                    <img src="assets/reply-gray.svg" style="width: 20px; height: 15px" />
+                    <h5>0</h5>
+                  </div>
+                </button>
+              </div>
+              <div class="list detail right">
+                <button>
+                  <div class="div_reply">
+                    <img src="assets/thumb-up-gray.svg" style="width: 20px; height: 15px" />
+                    <h5>0</h5>
+                  </div>
+                </button>
+                <button>
+                  <div class="div_reply">
+                    <img src="assets/thumb-down-gray.svg" style="width: 20px; height: 15px" />
+                    <h5>0</h5>
+                  </div>
+                </button>
+                <button>
+                  <div class="div_reply">
+                    <img src="assets/share-gray.svg" style="width: 20px; height: 15px" />
+                    <h5>0</h5>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        <hr class="devide_bold_line"></hr>
+      </div>
+      </div>
+      
+    
+    <div class="input_reply_container">
+      <h2 style="margin:10px 0 10px 0">나도한마디!</h2>
+      <div id ="myBtn" class="input_reply_wrapper">
+        <input class="input_reply" type="text" placeholder="댓글을 입력해주세요.">
+        <button class="input_submit">등록</button>
+      </div>
+    </div>
+   </div>
+  <div id="login_modal" class="modal">
+    <div class="modal_content">
+      <span class="close"></span>  
+      <div class="modal_info"><h2 style="color:red;">SNS로그인</h2><h2>해서 댓글 쓰기</h2></div>
+      <div id="btn_container">
+        <button class="login_btn naver" onclick="login('naver')">네이버로 로그인</button>
+        <button class="login_btn kakao" onclick="login('kakao')">카카오톡으로 로그인</button>
+        <button class="login_btn facebook" onclick="login('facebook')">페이스북으로 로그인</button>
+        <button class="login_btn google" onclick="login('google')">구글로 로그인</button>
+        <button class="login_btn twitter" onclick="login('twitter')">트위터로 로그인</button>
+      </div>                                                             
+      <div style="margin:0 auto;"><h5 style="color:lightgray"> &copy; issol</h5></div>
+    </div>
+  </div>
+
+  <div id="reply_modal" class="write_modal">
+    <div class="reply_modal_content">
+      <span class="reply_close"></span>
+
+      <div class="user_info">
+        <img id="user_picture"  style="width:40px; height:40px; margin-right:5px;"/>
+        <img id="login_platform"  style="width:15px; height:15px; margin-right:5px;"/>
+        <h5 id="logined_user" class="logined_user_name">dd</h5>
+      </div>
+      <textarea id="written_reply" class="reply_textarea" rows="3" autofocus placeholder="댓글 작성 시 상대방에 대한 배려와 책임을 담아주세요."></textarea>
+      <div class="additional_function">
+        <div class="attach">
+          <img src="assets/picture.svg" style="margin-right:15px;"/>
+          <img src="assets/smile.svg"/>
+        </div>
+        <div>
+          <h5>자동공유</h5>
+        </div>
+      </div>
+      <button id="submit_reply_btn" class="submit_btn" onclick="submit_reply()">댓글 등록</button>
+     
+    </div>
+  </div>
+
+    <script type="text/javascript" src="index.js"></script>
+    
+    
+  </body>
+</html>
